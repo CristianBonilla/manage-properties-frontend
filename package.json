@@ -1,8 +1,25 @@
 {
   "name": "manage-properties-frontend",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cristian Bonilla",
+    "email": "cristiancamilo10_95@outlook.com",
+    "url": "https://www.linkedin.com/in/cristian-bonilla95/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CristianBonilla/manage-properties-frontend.git"
+  },
   "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.12.0",
+    "npm": ">=6.11.3",
+    "yarn": ">=1.22.0"
+  },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.17",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -10,14 +27,18 @@
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
+    "axios": "^0.25.0",
+    "node-sass": "^7.0.1",
     "react": "^17.0.2",
+    "react-bootstrap": "~1.6.4",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "CHOKIDAR_USEPOLLING=true BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
