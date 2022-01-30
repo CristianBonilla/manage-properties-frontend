@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'themes/typography';
+
+@import 'base/misc';
+
+@import 'layout/navbars';
+@import 'layout/sidebar-and-main-panel';
+@import 'layout/footers';
+
+@import 'modules/buttons';
+@import 'modules/inputs';
+@import 'modules/alerts';
+@import 'modules/tables';
+@import 'modules/cards';
+@import 'modules/dropdown';
+@import 'modules/bootstrap-switch';
+@import 'modules/checkbox-radio-switch';
+
+@import 'responsive';
