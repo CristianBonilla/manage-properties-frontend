@@ -1,108 +1,78 @@
-/*     General overwrite     */
-body,
-.wrapper{
-    min-height: 100vh;
-    position: relative;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-a{
-  color: $info-color;
 
-  &:hover, &:focus{
-     color: $info-states-color;
-     text-decoration: none;
+html {
+  font-family: #{ $sans-serif };
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: #{ $sourcesans-r }, #{ $sans-serif };
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #F6F6F6;
+  color: #2D3033;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button,
+input,
+textarea,
+main,
+section {
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
   }
 }
 
-a:focus, a:active,
-button::-moz-focus-inner,
-input::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner,
-select::-moz-focus-inner,
-input[type="file"] > input[type="button"]::-moz-focus-inner{
-    outline:0;
-}
-.ui-slider-handle:focus,
-.navbar-toggle,
-input:focus {
-    outline : 0 !important;
+a,
+button {
+  text-decoration: none;
+  border: 0;
 }
 
-/*           Animations              */
-.form-control,
-.input-group-addon,
-.tagsinput,
-.navbar,
-.navbar .alert{
-    @include transition($general-transition-time, $transition-linear);
+.wrapper {
+  position: relative;
+  top: 0;
+  min-height: 100vh;
+  height: auto;
+  padding-bottom: 129.19px;
+  margin: 0;
+
+  @media (min-width: 234px) {
+    padding-bottom: 107.59px;
+  }
+
+  @media (min-width: 381px) {
+    padding-bottom: 86px;
+  }
 }
 
-.sidebar .nav a,
-.table > tbody > tr .td-actions .btn{
-    @include transition($fast-transition-time, $transition-ease-in);
-}
+.content {
+  min-height: calc(100vh - 129.19px);
+  padding: 52px 0 20px;
+  width: 100%;
+  background-color: $white-color;
 
-.btn{
-    @include transition($ultra-fast-transition-time, $transition-ease-in);
-}
-.fa,.fas,.far,.fal,.fad,.fab{
-    width: 18px;
-    text-align: center;
-}
-.margin-top{
-    margin-top: 50px;
-}
+  @media (min-width: 234px) {
+    min-height: calc(100vh - 107.59px);
+  }
 
-.wrapper{
-    position: relative;
-    top: 0;
-    height: 100vh;
-}
-
-// documentation
-
-.page-header{
-    .page-header-image{
-        background-position: center center;
-        background-size: cover;
-        overflow: hidden;
-        width: 100%;
-        z-index: 1;
-    }
-    .title-container{
-        color: #fff;
-        position: relative;
-        top: 250px;
-        z-index: 3;
-    }
-    .filter:after{
-        background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #9368e9 0%, #943bea 100%) repeat scroll 0 0 / 150% 150%;
-        content: "";
-        display: block;
-        height: 100%;
-        left: 0;
-        opacity: 0.77;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 2;
-    }
-}
-
-.documentation .page-header,
-.documentation .page-header-image,
-.documentation .page-header-image .filter:after{
-    height: 100vh;
-}
-
-.documentation .footer{
-    z-index: 3;
-}
-.documentation .wrapper{
-    margin-top: -61px;
-    height: 100vh;
-}
-.documentation .navbar{
-    z-index: 21;
+  @media (min-width: 381px) {
+    min-height: calc(100vh - 86px);
+  }
 }

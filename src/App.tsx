@@ -1,8 +1,13 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ManageProperties } from '@modules/ManageProperties';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/' render={ props => <ManageProperties { ...props } /> } />
+      </Switch>
+    </Router>
   );
 }
 

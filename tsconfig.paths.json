@@ -5,7 +5,12 @@
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@src/*": ["./src/*"]
+      "@src/*": ["./src/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@models/*": ["./src/models/*"],
+      "@views/*": ["./src/views/*"],
+      "@components/*": ["./src/components/*"]
     }
   }
 }

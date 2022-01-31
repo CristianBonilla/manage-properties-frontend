@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'source_sans_probold';
+  src: url('#{ $fonts-path }/source-sans-pro/sourcesanspro-bold.eot');
+  src: url('#{ $fonts-path }/source-sans-pro/sourcesanspro-bold.eot?#iefix') format('embedded-opentype'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-bold.woff2') format('woff2'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-bold.woff') format('woff'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-bold.ttf') format('truetype'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-bold.svg#source_sans_probold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url('#{ $fonts-path }/source-sans-pro/sourcesanspro-regular.eot');
+  src: url('#{ $fonts-path }/source-sans-pro/sourcesanspro-regular.eot?#iefix') format('embedded-opentype'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-regular.woff2') format('woff2'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-regular.woff') format('woff'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-regular.ttf') format('truetype'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-regular.svg#source_sans_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_prosemibold';
+  src: url('#{ $fonts-path }/source-sans-pro/sourcesanspro-semibold.eot');
+  src: url('#{ $fonts-path }/source-sans-pro/sourcesanspro-semibold.eot?#iefix') format('embedded-opentype'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-semibold.woff2') format('woff2'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-semibold.woff') format('woff'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-semibold.ttf') format('truetype'),
+    url('#{ $fonts-path }/source-sans-pro/sourcesanspro-semibold.svg#source_sans_prosemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
