@@ -1,0 +1,33 @@
+.properties {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+
+    h4 {
+      text-align: center;
+      font-size: $title-size;
+      color: $title-color;
+      font-family: $sourcesans-sb;
+    }
+  }
+
+  &_content {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    background-color: $white-color;
+    max-width: 1000px;
+
+    @include content-shadow();
+  }
+}

@@ -1,0 +1,5 @@
+@mixin content-shadow {
+  box-shadow: 0 15px 30px 0 $content-shadow-color, 0 5px 15px 0 $content-shadow-color;
+  -webkit-box-shadow: 0 15px 30px 0 $content-shadow-color, 0 5px 15px 0 $content-shadow-color;
+  -moz-box-shadow: 0 15px 30px 0 $content-shadow-color, 0 5px 15px 0 $content-shadow-color;
+}

@@ -63,6 +63,9 @@ button {
 }
 
 .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: calc(100vh - 129.19px);
   padding: 52px 0 20px;
   width: 100%;
