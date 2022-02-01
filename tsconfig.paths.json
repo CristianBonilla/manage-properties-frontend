@@ -6,6 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@src/*": ["./src/*"],
+      "@api/*": ["./src/api/*"],
       "@layout/*": ["./src/layout/*"],
       "@modules/*": ["./src/modules/*"],
       "@models/*": ["./src/models/*"],

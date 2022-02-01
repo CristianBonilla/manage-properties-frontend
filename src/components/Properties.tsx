@@ -1,4 +1,33 @@
+import { useState, useEffect } from 'react';
+import { PROPERTIES_API } from '@api/properties.api';
+import { PropertiesFilter } from '@models/properties-filter';
+
 function Properties() {
+  const [ properties, setProperties ] = useState<PropertiesFilter[]>([]);
+
+  const fetchProperties = async () => {
+    const { data: properties } = await PROPERTIES_API.get<PropertiesFilter[]>('/');
+    if (!!properties.length) {
+      setProperties(properties);
+    }
+  };
+
+  useEffect(() => {
+    fetchProperties();
+  }, []);
+
+  const renderProperties = ({ ownerId, ownerName, properties }: PropertiesFilter) =>
+    properties.map((property, index) => (
+      <tr key={ `${ ownerId }__${ index }` }>
+        <td>{ property.name }</td>
+        <td>{ ownerName }</td>
+        <td>{ property.address }</td>
+        <td>{ property.price }</td>
+        <td>{ property.codeInternal }</td>
+        <td>{ property.year }</td>
+      </tr>
+    ));
+
   return (
     <div className="properties">
       <div className="properties_title">
@@ -19,7 +48,6 @@ function Properties() {
             <table className="table">
               <thead className="table_head">
                 <tr>
-                  <th><strong>Imagen</strong></th>
                   <th><strong>Nombre</strong></th>
                   <th><strong>Nombre del dueño</strong></th>
                   <th><strong>Dirección</strong></th>
@@ -30,7 +58,6 @@ function Properties() {
               </thead>
               <tfoot className="table_foot">
                 <tr>
-                  <th><span>Imagen</span></th>
                   <td><span>Nombre</span></td>
                   <td><span>Nombre del dueño</span></td>
                   <td><span>Dirección</span></td>
@@ -39,7 +66,9 @@ function Properties() {
                   <td><span>Año</span></td>
                 </tr>
               </tfoot>
-              <tbody className="table_body"></tbody>
+              <tbody className="table_body">
+                { properties.flatMap(renderProperties) }
+              </tbody>
             </table>
           </div>
         </div>

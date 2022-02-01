@@ -1,6 +1,7 @@
 export interface PropertyImage {
   propertyId: string;
   file: FormData;
+  fileName: string;
   enabled: boolean;
 }
 
